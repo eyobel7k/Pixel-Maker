@@ -3,8 +3,6 @@
 // Select Canvas area
 
 // Model
-
-
 const gridHeight = () => document.querySelector("#inputHeight").value;
 
 const gridWidth = () => document.querySelector("#inputWidth").value;
@@ -16,15 +14,14 @@ const makeTable = () => document.getElementById("pixelCanvas");
 
 //  Controller
 document.querySelector("#btn").addEventListener("click", (e) => {
-  e.preventDefault()
+  e.preventDefault();
   // assigning gridHeight and gridWidth functions to variables
   let height = gridHeight();
   let width = gridWidth();
-  makeGrid()
+  makeGrid();
   // On submit, removing the previous table
-  makeTable().firstChild.remove()
+  makeTable().firstChild.remove();
   makeGrid(height, width);
-
 });
 //  View
 function makeGrid(col, row) {
@@ -36,7 +33,7 @@ function makeGrid(col, row) {
       //  create another event listener on the cell to change background color
       cellTable.addEventListener("mouseover", (e) => {
         cellTable.style.backgroundColor = getColor();
-      })
-    }
-  }
-}
+      });
+    };
+  };
+};
