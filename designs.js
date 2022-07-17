@@ -31,7 +31,7 @@ function makeGrid(col, row) {
     for (let j = 0; j < gridHeight(); j++) {
       let cellTable = table.insertCell(j)
       //  create another event listener on the cell to change background color
-      cellTable.addEventListener("mouseover", (e) => {
+      cellTable.addEventListener("click", (e) => {
         cellTable.style.backgroundColor = getColor();
       });
     };
